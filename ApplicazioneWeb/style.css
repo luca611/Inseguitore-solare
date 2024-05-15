@@ -1,1 +1,113 @@
 
+body {
+    background-color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.button-open {
+    background-color: #32cd32;
+    color: black;
+	border-radius: 0.5rem;
+    padding: 16px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    width: 280px;
+    transition: 0.4s ease;
+    top: 40%;
+    left: 40%;
+	font-weight:bold;
+}
+
+.button-sign-in{
+	background-color: black;
+    color: white;
+    padding: 1px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    width: 280px;
+    transition: 0.4s ease;
+    top: 50%;
+    left: 40%;
+	text-decoration: none;
+	border-radius: 0.5rem;
+}
+
+.button-open:hover {
+    opacity: 1;
+    background-color:green;
+	color:black;
+	
+}
+
+.button-sign-in:hover {
+	font-style:italic;
+	color:white;
+	text-shadow:1px 1px 1px;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 15px;
+    max-width: 300px;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus,
+.form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-container .btn {
+    background: linear-gradient(90deg, #f7ee34, #f5b43d);
+    color: black;
+	font-weight:bold;
+    padding: 16px 20px;
+    border-radius: 0.5rem; 
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.form-container .btn:hover {
+    opacity: 1;
+}
+
+.cancel {
+    background-color: red;
+}
+
+.form-container h1 {
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.form-container b {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

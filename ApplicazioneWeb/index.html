@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">     <!-- collegamento css -->
+</head>
+<body>
+
+	<button class="button-open" onclick="document.getElementById('loginForm').style.display='block'">Login</button>
+	<button class="button-sign-in" onclick="document.getElementById('signInForm').style.display='block'">Sign in</button>
+	
+	
+	<!--LOGIN -->
+	<div class="form-popup" id="loginForm">
+		<form action="/action_page.php" class="form-container">
+			<h1>Login</h1>
+
+			<label for="email"><b>Email</b></label>
+			<input type="text" placeholder="Inserisci l'email" name="email" required>
+
+			<label for="psw"><b>Password</b></label>
+			<input type="password" placeholder="Inserisci la password" name="psw" required>
+
+			<button type="submit" class="btn">Login</button>
+			<button type="button" class="btn cancel" onclick="document.getElementById('loginForm').style.display='none'">Chiudi</button>
+		</form>
+	</div>
+	
+	<!--SIGN-IN -->
+	<div class="form-popup" id="signInForm">
+		<form action="/action_page.php" class="form-container">
+			<h1>Sign In</h1>
+
+			<label for="user"><b>Nome utente</b></label>
+			<input type="text" placeholder="Inserisci il nome utente" name="user" required>
+			
+			<label for="email"><b>Email</b></label>
+			<input type="text" placeholder="Inserisci l'email" name="email" required>
+
+			<label for="psw"><b>Password</b></label>
+			<input type="password" placeholder="Inserisci la password" name="psw" required>
+
+			<button type="submit" class="btn">Sign In</button>
+			<button type="button" class="btn cancel" onclick="document.getElementById('signInForm').style.display='none'">Chiudi</button>
+		</form>
+	</div>
+
+	<script>
+	
+		function openForm() {
+			document.getElementById("myForm").style.display = "block";
+		}
+
+		function closeForm() {
+			document.getElementById("myForm").style.display = "none";
+		}
+		
+	</script>
+
+</body>
+</html>
