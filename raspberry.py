@@ -1,0 +1,1 @@
+#questo codice servirà per il raspberry
