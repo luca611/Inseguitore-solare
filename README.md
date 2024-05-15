@@ -1,1 +1,1 @@
-# Inseguitore-solare
+Progetto scolastico: Creazione di un inseguitore solare
