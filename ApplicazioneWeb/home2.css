@@ -1,0 +1,132 @@
+
+body {
+    background: white;
+}
+
+
+.titolo {
+    margin-left: 3.5rem;
+    color: orange;
+    font-size: 4rem;
+    margin-bottom: 1px;
+}
+
+
+.sottotitolo {
+    margin-left: 3.5rem;
+    margin-top: 1px;
+    color: #FFBB7C;
+    margin-bottom: 5px;
+}
+
+
+.container1 {
+    display: flex;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 2rem;
+    width: 90%;
+    height: 600px;
+    background-color: #FFBB7C;
+    margin: 0 3rem;
+}
+
+
+.container2 {
+    border-radius: 2rem;
+    width: 92%;
+    height: 13rem;
+    background-color: white;
+    margin: 1.5rem 3rem;
+    position: relative;
+}
+
+.aggiungi {
+	border-radius: 1rem;
+	width: 5rem;
+	height: 5rem;
+	background-color: #FF9E43;
+	margin-left: 69rem;
+	margin-top: 31rem;
+	position: absolute;
+    
+}
+
+
+.piu1, .piu2 {
+    position: absolute;
+    background-color: white;
+}
+
+.piu1 {
+    width: 0.5rem;
+    height: 4rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.piu2 {
+    width: 4rem;
+    height: 0.5rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.info {
+    border-radius: 0.5rem;
+    width: 7rem;
+    height: 3rem;
+    background-color: white;
+    position: absolute;
+    top: 9rem;
+    right: 1rem;
+    border: 2px solid #FF9E43;
+    cursor: pointer;
+}
+
+
+.textInfo {
+    font-style: italic;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.aggiungi:hover {
+    background-color: #f68a31;
+}
+
+.aggiungi:hover .piu1, .aggiungi:hover .piu2 {
+    background-color: rgb(241, 237, 237);
+}
+
+.info:hover {
+    background-color: rgb(250, 245, 245);
+    border-color: #f68a31;
+}
+
+.img-container {
+    width: 5rem;
+    height: 5rem;
+    border: 2px solid black;
+    background: none;
+    border-radius: 100%;
+    position: absolute;
+    right: 5rem;
+    transform: translateY(-13%);
+    z-index: 2;
+	
+}
+
+.img {
+    width: 7.4rem;
+    height: 7.9rem;
+    border-radius: 100%;
+    position: absolute;
+    right: 3.5rem;
+    transform: translateY(-25%);
+    z-index: 1;
+}

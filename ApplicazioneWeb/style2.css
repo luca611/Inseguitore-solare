@@ -1,12 +1,12 @@
 
 body {
-    background-color: rgb(247, 250, 101);
+    background-color: rgb(255, 255, 255);
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
 .button-open {
-    background-color: #4c9fff;
+    background-color: #ffa500;
     color: black;
 	border-radius: 0.5rem;
     border: 2px solid black;
@@ -17,14 +17,14 @@ body {
     position: fixed;
     width: 280px;
     transition: 0.4s ease;
-    top: 40%;
+    bottom:18%;
     left: 40%;
 	font-weight:bold;
     
 }
 
 .button-sign-in{
-	background-color:rgb(247, 250, 101) ;
+	background-color:rgb(255, 255, 255) ;
     color: black;
     padding: 0px 20px;
     font-size: 1rem;
@@ -34,7 +34,7 @@ body {
     position: fixed;
     width: 280px;
     transition: 0.4s ease;
-    top: 50%;
+    bottom: 10%;
     left: 40%;
 	text-decoration: none;
 	border-radius: 0.5rem;
@@ -42,8 +42,7 @@ body {
 
 .button-open:hover {
     opacity: 1;
-    background-color:rgb(10, 77, 159);
-	color:rgb(255, 255, 255);
+    background-color:#ffa500;
     text-shadow: 0px 0px 0px #f1f1f1 ;
 	
 }
@@ -60,9 +59,11 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(178, 182, 192);
-    padding: 15px;
-    max-width: 300px;
+    background-color:white;
+    padding: 10px;
+	height:700px;
+    max-width: 400px;
+	max-height: 700px;
 }
 
 .form-container input[type=text], .form-container input[type=password] {
@@ -78,9 +79,9 @@ body {
     background-color: #ddd;
     outline: none;
 }
-
 .form-container .btn {
-    background: linear-gradient(90deg, #34a6f7, #4c3df5);
+	margin-top:20px;
+    background: orange ;
     color: black;
 	font-weight:bold;
     padding: 16px 20px;
@@ -115,9 +116,58 @@ body {
 
 
 .img{
-    width: 200px; 
+    width: 300px; 
     height: auto; 
-    border-radius: 10%; 
-    border: 2px solid black; 
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+	margin-left:39%;
+	margin-top: 5%;
 }
+
+.text-logo{
+	font-weight: bold;
+	text-align:center;
+	font-size:2rem;
+    margin-bottom: 0; 
+	color: orange;
+}
+
+.rigaHome hr {
+    width: 25%;
+    height: 4px;
+    margin: 0 auto; 
+    border-color: orange; 
+	background:orange;
+}
+
+.rigaLogin hr {
+    width: 70%;
+    height: 4px;
+    margin: 0 auto; 
+    border-color: orange;	
+	background:orange;
+	margin-bottom:1px;
+}
+
+
+.h2Login{
+	font-size:2rem;
+	text-align:center;
+	color:orange;
+
+}
+
+
+button.btn.cancel{	
+	margin-top:0px;
+	background: none;
+	border: none;
+}
+
+.slogan{
+	color: orange;
+	margin-top:6px;
+	text-align:center;
+	font-style:italic;
+	font-size:1.5rem;
+
+}
+
