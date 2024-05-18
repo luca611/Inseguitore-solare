@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title> <!-- Il titolo della pagina -->
+    <link rel="stylesheet" type="text/css" href="home2.css"> <!-- Collegamento al file CSS -->
+    <script>
+        function openInfoPage() {
+            window.location.href = 'index2.html'; 
+        }
+    </script>
+</head>
+<body>
+    <h1 class="titolo">Welcome</h1>
+	<img class="img" src="immagini/incognito3.png" alt="Immagine del logo">
+	<div class="img-container">
+	</div>
+    <h2 class="sottotitolo" style="border-color: #FFE8D2;">Your user friendly panel</h2>
+    <h2 style="border-color: #FFE8D2; margin-left: 3.5rem; color: black; font-size: 2rem; margin-bottom: 1px;">Your devices</h2>
+
+    <div class="container1">
+        <div class="container2">
+            <div class="info" id="infoDiv" onclick="openInfoPage()">
+                <h6 class="textInfo">informazioni</h6>
+            </div>
+            <div class="aggiungi" onclick="openInfoPage()">
+                <div class="piu1"></div>
+                <div class="piu2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
