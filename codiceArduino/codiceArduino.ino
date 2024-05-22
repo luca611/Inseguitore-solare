@@ -3,7 +3,6 @@
 
 const int Steps = 2048; 
 const int Velocita = 15;    
-const float resistenzaMax = 10000.0;
 
 #define PIN_FOTO A1
 #define PIN_PANNELLO A0
@@ -49,14 +48,14 @@ void setup() {
   pinMode(PIN_PANNELLO, INPUT);
   giratore.setSpeed(Steps);
   inclinatore.attach(PIN_INCLINATORE);
-
+  inclinatore.write(35);
 }
 
 void loop() {
   int dest = cercaLuce();
   posiziona(dest);
   inclina();
-  delay(60000*15);
+  delay(10000);
 }
 
 
@@ -71,7 +70,7 @@ int cercaLuce(){
   for(int i = 0; i<36;i++){
     ruota(Steps/36);
     //attesa che il pannello riesca a restituire un valore nuovo
-    delay(1000);
+    delay(100);
     luceRilev = analogRead(PIN_PANNELLO); 
     //normale swap se il valore letto è maggiore del vecchio massimo
     if(luceRilev>maxLuce){
@@ -99,12 +98,21 @@ void posiziona(int destinazione){
 }
 
 int calcolaAngolazione(){
-  int valoreLettura = analogRead(PIN_FOTO); // Legge il valore di resistenza dal fotoresistore
-  int resistenza = map(valoreLettura, 0, 1023, 0, resistenzaMax); // Mappa il valore letto al range di resistenza
-  
-  int angolo = atan(resistenza / resistenzaMax) * (180.0 / PI); // Calcola l'angolo dei raggi solari
-  // La funzione atan restituisce l'angolo in radianti, quindi moltiplichiamo per (180/PI) per ottenere l'angolo in gradi
-  return angolo;
+  int maxLuce = 0; 
+  int maxPos = 0;
+  //imposto il servo a una posizione di partenza
+  inclinatore.write(0);
+  for(int i = 0; i<90;i+=10){
+    inclinatore.write(i);
+    delay(1000);
+    //controllo se i livelli sono maggiori di quelli registrati in precedenza
+    int currentLuce = analogRead(PIN_PANNELLO);
+    if(currentLuce > maxLuce){
+      maxLuce = currentLuce;
+      maxPos = i; 
+    }
+  }
+  return maxPos;
 }
 
 void ruota(int passi){
