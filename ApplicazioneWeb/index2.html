@@ -1,83 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>Login Form</title>
-    <link rel="stylesheet" type="text/css" href="style2.css">     <!-- collegamento css -->
+    <link rel="stylesheet" type="text/css" href="style2.css"> <!-- collegamento css -->
 </head>
 <body>
+    <button class="button-open" onclick="document.getElementById('loginForm').style.display='block'">Login</button>
+    <button class="button-sign-in" onclick="document.getElementById('signInForm').style.display='block'">Register</button>
 
-	<button class=	"button-open" onclick="document.getElementById('loginForm').style.display='block'">Login</button>
-	<button class="button-sign-in" onclick="document.getElementById('signInForm').style.display='block'">Register</button>
+    <img class="img" src="immagini/logo.webp" alt="Immagine del logo">
 
-	<img class="img" src="immagini/logo.webp" alt="Immagine del logo">
+    <p class="text-logo">SUNFLOWER</p>
+    <div class="rigaHome">
+        <hr>
+    </div>
+    <p class="slogan">Make it renewable</p>
+    <p style="text-align:center; margin-top:20rem;">or</p>
+    
+    <!-- LOGIN -->
+    <div class="form-popup" id="loginForm">
+        <form action="home2.html" class="form-container">
+            <h1 style="color: orange; margin-bottom: 1px;">SUNFLOWER</h1>
+            <div class="rigaLogin">
+                <hr>
+            </div>
+            <h2 class="h2Login">LOGIN</h2>
+            <label for="username"><b style="color: orange">Username</b></label>
+            <input type="text" placeholder="Inserisci username" name="email" required style="border: 1px solid orange;">
+            <label for="psw"><b style="color: orange">Password</b></label>
+            <input type="password" placeholder="Inserisci la password" name="psw" required style="border: 1px solid orange">
+            <button type="submit" class="btn">Login</button>
+            <p style="text-align:center">or</p>
+            <button type="button" class="btn cancel" onclick="switchToRegister()">Register</button>
+        </form>
+    </div>
+    
+    <!-- REGISTER -->
+    <div class="form-popup" id="signInForm">
+        <form action="home2.html" class="form-container" method="post">
+            <h1 style="color: orange; margin-bottom: 1px;">SUNFLOWER</h1>
+            <div class="rigaLogin">
+                <hr>
+            </div>
+            <h2 class="h2Login">Register</h2>
+            <label for="user"><b style="color: orange">Nome utente</b></label>
+            <input type="text" placeholder="Inserisci il nome utente" name="user" required style="border: 1px solid orange">
+            <label for="email"><b style="color: orange">Email</b></label>
+            <input type="text" placeholder="Inserisci l'email" name="email" required style="border: 1px solid orange">
+            <label for="psw"><b style="color: orange">Password</b></label>
+            <input type="password" placeholder="Inserisci la password" name="psw" required style="border: 1px solid orange">
+            <button type="submit" class="btn">Register</button>
+            <p style="text-align:center">or</p>
+            <button type="button" class="btn cancel" onclick="switchToLogin()">Login</button>
+        </form>
+    </div>
 
-	<p class="text-logo"> SUNFLOWER </p>
-	<div class="rigaHome">
-		<hr>
-	</div>
-	<p class="slogan"> Make it renewable </p>
-	<!--LOGIN -->
-	<div class="form-popup" id="loginForm">
-		<form action="home2.html" class="form-container">
-			<h1 style="color: orange; margin-bottom: 1px;">SUNFLOWER</h1>
-			<div class="rigaLogin">
-				<hr>
-			</div>
-			
-			<h2 class="h2Login"> LOGIN</h2>
+    <script>
+        function switchToRegister() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('signInForm').style.display = 'block';
+        }
 
-			<!--EMAIL-->
-			<label for="username"><b style="color: orange" >Username</b></label>
-			<input type="text"  placeholder="Inserisci username" name="email" required style="border: 1px solid orange;">
-			<!--PASSWORD-->
-			<label for="psw"><b style="color: orange">Password</b></label>
-			<input type="password" placeholder="Inserisci la password" name="psw" required style="border: 1px solid orange">
-
-
-			<button type="submit" class="btn">Login</button>
-			<p style="text-align:center"> or </p>
-			<button type="button" class="btn cancel" onclick="document.getElementById('loginForm').style.display='none'">Register</button>
-		</form>
-	</div>
-	
-	<!--SIGN-IN -->
-
-	<div class="form-popup" id="signInForm">
-		<form action="pagina2.html" class="form-container" method="post">
-			<h1 style="color: orange; margin-bottom: 1px;">SUNFLOWER</h1>
-			<div class="rigaLogin">
-				<hr>
-			</div>
-			
-			<h2 class="h2Login"> Register</h2>
-			<!--NOME UTENTE-->
-			<label for="user"><b style="color: orange" >Nome utente</b></label>
-			<input type="text" placeholder="Inserisci il nome utente" name="user" required style="border: 1px solid orange">
-			<!--EMAIL-->
-			<label for="email"><b style="color: orange" >Email</b></label>
-			<input type="text" placeholder="Inserisci l'email" name="email" required style="border: 1px solid orange">
-			<!--PASSWORD-->
-			<label for="psw"><b style="color: orange" >Password</b></label>
-			<input type="password" placeholder="Inserisci la password" name="psw" required style="border: 1px solid orange">
-
-			<button type="submit" class="btn">Register</button>
-			<button type="button" class="btn cancel" onclick="document.getElementById('signInForm').style.display='none'">Login</button>
-		</form>
-	</div>
-
-	<script>
-	
-		function openForm() {
-			document.getElementById("myForm").style.display = "block";
-		}
-
-		function closeForm() {
-			document.getElementById("myForm").style.display = "none";
-		}
-		
-	</script>
-
+        function switchToLogin() {
+            document.getElementById('signInForm').style.display = 'none';
+            document.getElementById('loginForm').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
-<!--comment-->

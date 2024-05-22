@@ -1,0 +1,37 @@
+body{
+	background:white;
+}
+.titolo{
+	font-size:3rem;
+	text-align:center;	
+	margin-top:2rem;
+	color: #FB7900;
+}
+
+.img{
+	border:2px solid black;
+	border-radius:100%;
+	width:7.4rem;
+	height:8rem;
+	background-color: white;
+	
+}
+
+.contenitore{
+	text-align:center;
+}
+
+.nome{
+	
+	border-radius:2rem;
+	height: 2rem;
+	margin-bottom: 1rem;
+	background-color: #FFE8D2;
+	
+}
+
+.cognome{
+	background-color: #FFE8D2;
+	border-radius: 2rem;
+	height: 2rem;
+}

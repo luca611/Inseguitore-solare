@@ -2,32 +2,66 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome</title> <!-- Il titolo della pagina -->
-    <link rel="stylesheet" type="text/css" href="home2.css"> <!-- Collegamento al file CSS -->
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="home2.css">
     <script>
         function openInfoPage() {
-            window.location.href = 'index2.html'; 
+            window.location.href = 'informazioni.html';
         }
+        function openProfilePage() {
+            window.location.href = 'profilo.html';
+        }
+		
+        function toggleAddDiv() {
+            var addDiv = document.getElementById('addDiv');
+            if (addDiv.style.display === 'none' || addDiv.style.display === '') {
+                addDiv.style.display = 'block';
+            } else {
+                addDiv.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            var addButton = document.getElementById('addButton');
+            addButton.addEventListener('click', () => {
+                toggleAddDiv();
+            });
+
+            var profileButton = document.getElementById('profileButton');
+            profileButton.addEventListener('click', () => {
+                openProfilePage();
+            });
+
+        });
     </script>
 </head>
 <body>
+    <div class="add" id="addDiv" style="display: none;">
+        <p style="color: black; padding-bottom:0; margin-left: 2rem; margin-bottom:0rem; font-weight:bold;">Name</p>
+        <div class="name" contenteditable="true"></div>
+        <p style="color: black; padding-bottom:0; margin-left: 2rem; margin-bottom:0rem; font-weight:bold;">General information</p>
+        <div class="information" contenteditable="true"></div>
+        <button class="addButton" id="addButton">add</button>
+    </div>
     <h1 class="titolo">Welcome</h1>
-	<img class="img" src="immagini/incognito3.png" alt="Immagine del logo">
-	<div class="img-container">
-	</div>
+    <img class="img" src="immagini/incognito3.png" alt="Immagine del logo">
+    <div class="img-container"></div>
+    <button class="profilo" id="profileButton">View Profile</button>
+    
     <h2 class="sottotitolo" style="border-color: #FFE8D2;">Your user friendly panel</h2>
     <h2 style="border-color: #FFE8D2; margin-left: 3.5rem; color: black; font-size: 2rem; margin-bottom: 1px;">Your devices</h2>
 
     <div class="container1">
-        <div class="container2">
-            <div class="info" id="infoDiv" onclick="openInfoPage()">
-                <h6 class="textInfo">informazioni</h6>
-            </div>
-            <div class="aggiungi" onclick="openInfoPage()">
-                <div class="piu1"></div>
-                <div class="piu2"></div>
-            </div>
+        <div class="info" id="infoDiv">
+            <h6 class="textInfo">Pannello 1</h6>
+			<p style="text-align:left; margin-left:1rem"> <b>Nome:</b> pannello</p>
+			<button class="visualizza"> visualizza</button>
+			<p style="text-align:left; margin-left:1rem";> <b>Informazioni:</b> prova pannello standard</p>
         </div>
+        <div class="aggiungi" onclick="toggleAddDiv()">
+            <div class="piu1"></div>
+            <div class="piu2"></div>
+        </div>    
     </div>
 </body>
 </html>
