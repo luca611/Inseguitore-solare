@@ -1,0 +1,14 @@
+body {
+    background: white;
+}
+
+.button{
+    width: 74px;
+	height: 29px;
+	flex-shrink: 0;
+	background-color: #FF9E43;
+	border-radius: 0.5rem;
+	margin-top: 45rem;
+	margin-left:95rem;
+}
+
