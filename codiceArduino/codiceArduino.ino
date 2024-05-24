@@ -136,3 +136,4 @@ void scrivi(){
 void inclina(){
   inclinatore.write(calcolaAngolazione());
 }
+
