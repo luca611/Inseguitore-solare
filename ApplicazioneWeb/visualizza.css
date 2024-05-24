@@ -1,14 +1,55 @@
 body {
     background: white;
+    text-align: center;
 }
 
-.button{
+.button {
     width: 74px;
-	height: 29px;
-	flex-shrink: 0;
-	background-color: #FF9E43;
-	border-radius: 0.5rem;
-	margin-top: 45rem;
-	margin-left:95rem;
+    height: 29px;
+    flex-shrink: 0;
+    background-color: #FF9E43;
+    border-radius: 0.5rem;
+    margin-top: 45rem;
+    margin-left: 95rem;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
 }
 
+.uscita {
+    color: #000;
+    font-family: "IBM Plex Mono";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+.image {
+    border: 2px solid black;
+    border-radius: 5%;
+    width: 40rem;
+    height: 25rem;
+    background-color: white;
+    margin-top: 5rem;
+}
+
+.posizione {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+
+.container {
+    display: flex;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 2rem;
+    width: 90%;
+    height: 1000px;
+    background-color: #FFE8D2;
+    margin: 0 3rem;
+}
