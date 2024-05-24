@@ -4,23 +4,34 @@
     <meta charset="UTF-8">
     <title>Profile</title>
     <link rel="stylesheet" type="text/css" href="profilo.css">
+	
+	<script>
+        function redirectToHome() {
+            window.location.href = "home2.html";
+        }
+		function saveProfile() {
+    		var nome = document.getElementById('nome').value;
+    		var email = document.getElementById('email').value;
+    		localStorage.setItem('nome', nome);
+    		localStorage.setItem('email', email);
+    		window.location.href = 'home2.html';
+		}
+    </script>
+
+	
 </head>
 <body>
-    <h1 class="titolo">YOUR PROFILE</h1>
 	<div class="contenitore">
+		<h1 class="titolo">YOUR PROFILE</h1>
 		<img class="img" src="immagini/incognito3.1.png" alt="Immagine del logo">
+		<p style="color: black; padding-bottom:0; margin: 0 auto; margin-bottom:0rem; font-weight:bold;">Name</p>
+		<input type="text" class="nome" placeholder="name" contenteditable="true">
+		<p style="color: black; padding-bottom:0; margin: 0 auto; margin-bottom:0rem; font-weight:bold;">Mail</p>
+		<input type="email" class="mail" placeholder="mail" contenteditable="true">
+			
+		<button class="save" onclick="redirectToHome()">Save</button>
 	</div>
 	
-	<div class="nome">
-		
-	</div>
-	
-	<div class="mail">
-		
-	</div>
-	<button class="save">
-		save
-	</button>
 	
 </body>
 </html>
