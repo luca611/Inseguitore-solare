@@ -6,9 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style2.css"> <!-- collegamento css -->
 </head>
 <body>
-    <button class="button-open" onclick="document.getElementById('loginForm').style.display='block'">Login</button>
-    <button class="button-sign-in" onclick="document.getElementById('signInForm').style.display='block'">Register</button>
-
+    
     <img class="img" src="immagini/logo.webp" alt="Immagine del logo">
 
     <p class="text-logo">SUNFLOWER</p>
@@ -16,8 +14,11 @@
         <hr>
     </div>
     <p class="slogan">Make it renewable</p>
-    <p style="text-align:center; margin-top:20rem;">or</p>
+    <button class="button-open" document.getElementById('loginForm').style.display='block'">Login</button>
     
+    <p style="margin: 0 auto; text-align: center;">or</p>
+    <button class="button-sign-in" onclick="document.getElementById('signInForm').style.display='block'">Register</button>
+
     <!-- LOGIN -->
     <div class="form-popup" id="loginForm">
         <form action="home2.html" class="form-container">
@@ -31,7 +32,7 @@
             <label for="psw"><b style="color: orange">Password</b></label>
             <input type="password" placeholder="Inserisci la password" name="psw" required style="border: 1px solid orange">
             <button type="submit" class="btn">Login</button>
-            <p style="text-align:center">or</p>
+            <p style="margin: 0 auto; text-align: center;">or</p>
             <button type="button" class="btn cancel" onclick="switchToRegister()">Register</button>
         </form>
     </div>
@@ -50,9 +51,9 @@
             <input type="text" placeholder="Inserisci l'email" name="email" required style="border: 1px solid orange">
             <label for="psw"><b style="color: orange">Password</b></label>
             <input type="password" placeholder="Inserisci la password" name="psw" required style="border: 1px solid orange">
-            <button type="submit" class="btn">Register</button>
-            <p style="text-align:center">or</p>
-            <button type="button" class="btn cancel" onclick="switchToLogin()">Login</button>
+            <button type="submit" class="btn" style="margin: 0 auto;">Register</button>
+            <p style="margin: 0 auto; text-align: center;">or</p>
+            <button type="button" class="btn cancel" style="margin: 0 auto;" onclick="switchToLogin()">Login</button>
         </form>
     </div>
 
