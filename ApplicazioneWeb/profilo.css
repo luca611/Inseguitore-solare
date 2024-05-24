@@ -21,17 +21,36 @@ body{
 	text-align:center;
 }
 
-.nome{
-	
-	border-radius:2rem;
-	height: 2rem;
-	margin-bottom: 1rem;
-	background-color: #FFE8D2;
-	
+.nome:focus{
+	width: 269px;
+	height: 49px;
+	flex-shrink: 0;
+	border-radius: 5px;
+	border: 1px solid #FFE8D2;
+	background: #FFE8D2;
+	margin: 0 auto;
+	margin-bottom: 4rem;
+	margin-top: 4rem;
 }
 
-.cognome{
-	background-color: #FFE8D2;
-	border-radius: 2rem;
-	height: 2rem;
+.mail:focus{
+	width: 269px;
+	height: 49px;
+	flex-shrink: 0;
+	border-radius: 5px;
+	border: 1px solid #FFE8D2;
+	background: #FFE8D2;
+	margin: 0 auto;
+}
+
+.save{
+	width: 117px;
+	height: 32px;
+	flex-shrink: 0;
+	background-color: #FB7900;
+	border-radius: 0.5rem;
+	margin-top: 4rem;
+	margin-left:48.5rem;
+	
+
 }
