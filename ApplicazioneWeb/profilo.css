@@ -1,3 +1,11 @@
+@font-face {
+    font-family: fontFigma;
+    src: url(fonts/IBMPlexMono-Bold.ttf);
+}
+body {
+    background: white;
+    font-family: "fontFigma";
+}
 .titolo {
     font-size: 3rem;
     text-align: center;    
