@@ -94,6 +94,17 @@ h4{
     background-color: rgb(241, 237, 237);
 }
 
+.oscuramento {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 5;
+}
+
+
 .img-container {
     width: 5rem;
     height: 5rem;
@@ -118,15 +129,17 @@ h4{
 }
 
 .add {
+    min-height: 30rem;
     position: absolute;
     border-radius: 2rem;
-    width: 83%;
-    height: 55rem;
+    width: auto;
+    height: 80vh;
     background-color: white;
-    margin-top: 12.5rem;
+    margin-top: 5vh;
     border: 2px solid black;
-    z-index: 2;
-    margin-left: 6.5rem;
+    z-index: 6;
+    left: 6.5rem;
+    right: 6.5rem;
     display: none; 
 }
 
@@ -142,15 +155,17 @@ h4{
 .name {
     margin-top: 0rem;
     margin-left: 2rem;
-    width: 67rem;
-    height: 5rem;
+    margin-right: 2rem;
+    width: auto;
+    height: 20%;
 }
 
 .information {
     margin-top: 1rem;
     margin-left: 2rem;
-    width: 67rem;
-    height: 37rem;
+    margin-right: 2rem;
+    width: auto;
+    height: 40%;
 }
 
 .name:focus, .information:focus {
@@ -211,4 +226,8 @@ h4{
 .visualizza:hover {
     background-color: #f68a31; 
     color: white; 
+}
+
+.hidden{
+    display: none;
 }

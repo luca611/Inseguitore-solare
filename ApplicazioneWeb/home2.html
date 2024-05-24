@@ -14,6 +14,11 @@
 		
         function toggleAddDiv() {
             var addDiv = document.getElementById('addDiv');
+            var oscuramento = document.getElementById('scuro');
+            
+            oscuramento.classList.toggle("hidden");
+            oscuramento.classList.toggle("oscuramento");
+
             if (addDiv.style.display === 'none' || addDiv.style.display === '') {
                 addDiv.style.display = 'block';
             } else {
@@ -36,10 +41,11 @@
     </script>
 </head>
 <body>
+    <div class="hidden" id="scuro"></div>
     <div class="add" id="addDiv" style="display: none;">
-        <p style="color: black; padding-bottom:0; margin-left: 2rem; margin-bottom:0rem; font-weight:bold;">Name</p>
+        <p style="color: rgb(255, 153, 0); padding-top: 0.5rem; padding-bottom:0.5rem; margin-left: 2rem; margin-bottom:0rem; font-weight:bold;">Name</p>
         <div class="name" contenteditable="true"></div>
-        <p style="color: black; padding-bottom:0; margin-left: 2rem; margin-bottom:0rem; font-weight:bold;">General information</p>
+        <p style="color: rgb(255, 153, 0); padding-bottom:0; margin-left: 2rem; margin-bottom:0rem; font-weight:bold;">General information</p>
         <div class="information" contenteditable="true"></div>
         <button class="addButton" id="addButton">add</button>
     </div>
