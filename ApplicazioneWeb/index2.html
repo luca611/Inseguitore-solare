@@ -14,7 +14,7 @@
         <hr>
     </div>
     <p class="slogan">Make it renewable</p>
-    <button class="button-open" document.getElementById('loginForm').style.display='block'">Login</button>
+    <button class="button-open" id="loginButton">Login</button>
     
     <p style="margin: 0 auto; text-align: center;">or</p>
     <button class="button-sign-in" onclick="document.getElementById('signInForm').style.display='block'">Register</button>
@@ -31,7 +31,7 @@
             <input type="text" placeholder="Inserisci username" name="email" required style="border: 1px solid orange;">
             <label for="psw"><b style="color: orange">Password</b></label>
             <input type="password" placeholder="Inserisci la password" name="psw" required style="border: 1px solid orange">
-            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn" id="loginSubmit">Login</button>
             <p style="margin: 0 auto; text-align: center;">or</p>
             <button type="button" class="btn cancel" onclick="switchToRegister()">Register</button>
         </form>
@@ -58,6 +58,11 @@
     </div>
 
     <script>
+        // Funzione per mostrare il form di login
+        document.getElementById('loginButton').addEventListener('click', function() {
+            document.getElementById('loginForm').style.display = 'block';
+        });
+
         function switchToRegister() {
             document.getElementById('loginForm').style.display = 'none';
             document.getElementById('signInForm').style.display = 'block';
