@@ -6,16 +6,29 @@
     <link rel="stylesheet" type="text/css" href="profilo.css">
 	
 	<script>
-        function redirectToHome() {
-            window.location.href = "home2.html";
-        }
 		function saveProfile() {
-    		var nome = document.getElementById('nome').value;
-    		var email = document.getElementById('email').value;
-    		localStorage.setItem('nome', nome);
-    		localStorage.setItem('email', email);
-    		window.location.href = 'home2.html';
-		}
+            var nome = document.getElementById('nome').value;
+            var email = document.getElementById('email').value;
+            
+            localStorage.setItem('nome', nome);
+            localStorage.setItem('email', email);
+
+			window.location.href = 'home2.html'; // Reindirizza dopo aver salvato i dati
+        }
+
+        function loadProfile() {
+            var nome = localStorage.getItem('nome');
+            var email = localStorage.getItem('email');
+            
+            if (nome) {
+                document.getElementById('nome').value = nome;
+            }
+            if (email) {
+                document.getElementById('email').value = email;
+            }
+        }
+
+        window.onload = loadProfile;
     </script>
 
 	
@@ -25,11 +38,11 @@
 		<h1 class="titolo">YOUR PROFILE</h1>
 		<img class="img" src="immagini/incognito3.1.png" alt="Immagine del logo">
 		<p style="color: black; padding-bottom:0; margin: 0 auto; margin-bottom:0rem; font-weight:bold;">Name</p>
-		<input type="text" class="nome" placeholder="name" contenteditable="true">
+		<input type="text" id="nome" class="nome" placeholder="name">
 		<p style="color: black; padding-bottom:0; margin: 0 auto; margin-bottom:0rem; font-weight:bold;">Mail</p>
-		<input type="email" class="mail" placeholder="mail" contenteditable="true">
+		<input type="email" id="email" class="mail" placeholder="mail">
 			
-		<button class="save" onclick="redirectToHome()">Save</button>
+		<button class="save" onclick="saveProfile()">Save</button>
 	</div>
 	
 	
