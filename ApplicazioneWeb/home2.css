@@ -1,30 +1,40 @@
+@font-face {
+    font-family: fontFigma;
+    src: url(fonts/IBMPlexMono-Bold.ttf);
+}
 body {
     background: white;
+    font-family: "fontFigma";
 }
 
 .titolo {
-    margin-left: 3.5rem;
+    margin-left: 3.5vw;
     color: orange;
     font-size: 4rem;
     margin-bottom: 1px;
 }
 
 .sottotitolo {
-    margin-left: 3.5rem;
+    margin-left: 3.5vw;
     margin-top: 1px;
     color: #FFBB7C;
     margin-bottom: 5px;
 }
 
+h4{
+    color: orange;
+}
 .container1 {
     display: flex;
     text-align: center;
+    align-items: normal;
     padding: 1rem;
-    border-radius: 2rem;
-    width: 90%;
-    height: 1000px;
+    border-radius: 1rem;
+    margin:1rem;
+    margin-left: 3.5vw;
+    width: 90vw;
+    height: 80vh;
     background-color: #FFBB7C;
-    margin: 0 3rem;
 }
 
 .aggiungi {
@@ -32,9 +42,9 @@ body {
     width: 5rem;
     height: 5rem;
     background-color: #FF9E43;
-    margin-left: 69rem;
-    margin-top: 56rem;
-    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    position: fixed;
     cursor: pointer;
 }
 
@@ -61,7 +71,7 @@ body {
 
 .info {
     border-radius: 0.5rem;
-    width: 90%;
+    width: 95%;
     height: 10rem;
     background-color: white;
     border: 2px solid #FF9E43;
@@ -87,13 +97,14 @@ body {
 .img-container {
     width: 5rem;
     height: 5rem;
-    border: 2px solid black;
+    border: 0.3rem solid #FF9E43;
     background: none;
     border-radius: 100%;
     position: absolute;
-    right: 5rem;
+    right: 5.5rem;
     transform: translateY(-50%);
     z-index: 2;
+    margin-bottom: 1rem;
 }
 
 .img {
@@ -101,7 +112,7 @@ body {
     height: 7.9rem;
     border-radius: 100%;
     position: absolute;
-    right: 3.5rem;
+    right: 4rem;
     transform: translateY(-50%);
     z-index: 1;
 }
@@ -170,11 +181,14 @@ body {
     top: 11rem; 
     background-color: #FFBB7C;
     color: black;
-    padding-top: 2px;
+    padding:0.3rem;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     cursor: pointer;
+    text-align: center;
     height:1.2rem;
+    font-family: "fontFigma";
+    padding-bottom: 1.5rem;
 }
 
 .profilo:hover {
@@ -183,8 +197,7 @@ body {
 
 .visualizza {
     float: right;
-    margin-right: 0.3rem;
-    margin-top: 0.3rem;
+    margin-right: 1rem;
     background-color: #FF9E43; 
     color: white; 
     border: none; 
