@@ -1,24 +1,48 @@
+@font-face {
+    font-family: fontFigma;
+    src: url(fonts/IBMPlexMono-Bold.ttf);
+}
 body {
-    background: #FFE8D2;
     text-align: center;
+    background: white;
+    font-family: "fontFigma";
 }
 
+.contenitore{
+    position: fixed;
+        top: 1rem;
+        right: 20vw;
+        bottom: 1rem;
+        left: 20vw;
+        background-color:#FFBB7C;
+    border-radius: 1.5rem;
+}
 .button {
-    width: 74px;
-    height: 29px;
+    border: none;
+    outline: none;
+    width: 5rem;
+    height: 2rem;
     flex-shrink: 0;
     background-color: #FF9E43;
     border-radius: 0.5rem;
-    margin-top: 45rem;
-    margin-left: 95rem;
-    position: fixed;
     right: 1rem;
     bottom: 1rem;
 }
 
+.conteinerVolt{
+    align-items: center;
+    vertical-align: middle;
+    border-radius: 0.5rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    width: 5rem;
+    height: 3rem;
+    background-color: white;
+    border: 3px solid #FF9E43;
+}
 .uscita {
-    color: #000;
-    font-family: "IBM Plex Mono";
+    color: #ffffff;
+    font-family: "fontFigma";
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -26,10 +50,10 @@ body {
 }
 
 .img {
-    border: 2px solid black;
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 5%;
-    width: 40rem;
-    height: 25rem;
+    width: 23rem;
+    height: 15rem;
     background-color: none;
     margin-top: 5rem;
 }
@@ -49,15 +73,11 @@ body {
     border-radius: 2rem;
     width: 90%;
     height: 1000px;
-    background-color: #FFE8D2;
+    background-color:#FFBB7C;
     margin: 0 3rem;
 }
 
-.volt {
-    text-align: left;
-    margin-left: 23rem;
-    margin-top: 2rem;
-}
+
 
 hr {
     margin-top: 1px;
@@ -70,4 +90,16 @@ hr {
 
 h2 {
     margin-bottom: 1px;
+}
+
+@media (max-width: 40em){
+    .contenitore{
+        position: fixed;
+            top: 1rem;
+            right: 1REM;
+            bottom: 1rem;
+            left: 1rem;
+            background-color:#FFBB7C;
+        border-radius: 1.5rem;
+    }
 }
