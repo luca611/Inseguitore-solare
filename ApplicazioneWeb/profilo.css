@@ -12,11 +12,21 @@ body {
     margin-top: 2rem;
     color: #FB7900;
 }
+
+.sottolineato{
+    background-color: #FB7900;
+    margin-top: -1rem;
+    width: 20rem;
+    border: 2px solid #FB7900;
+    color: #FB7900;
+    height: 0rem;
+}
+
 .img {
-    border: 2px solid black;
+    border: 5px solid rgb(243, 97, 0);
     border-radius: 100%;
     width: 7.4rem;
-    height: 8rem;
+    height: 7.4rem;
     background-color: white;
     display: block; 
     margin: 2rem auto; 
@@ -35,13 +45,20 @@ body {
     display: block;
 }
 .save {
-    width: 117px;
-    height: 32px;
-    flex-shrink: 0;
+    font-family: "fontFigma";
+    color: white;
+    width: 10rem;
+    height: 2.5rem;
+    border: none;
     background-color: #FB7900;
     border-radius: 0.5rem;
     margin: 2rem auto 0;
     display: block;
+}
+
+.save:hover {
+    
+    background-color: #fc9b40;
 }
 .nome:focus, .mail:focus {
     border: 2px solid #FF9E43;

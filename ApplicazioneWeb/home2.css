@@ -195,7 +195,7 @@ h4{
     right: 5rem;
     top: 11rem; 
     background-color: #FFBB7C;
-    color: black;
+    color: rgb(255, 255, 255);
     padding:0.3rem;
     border: none;
     border-radius: 0.2rem;
@@ -233,6 +233,10 @@ h4{
 }
 
 @media (max-width: 40em){
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
     .add{
         position: fixed;
         width: auto;
