@@ -8,6 +8,7 @@
         function openInfoPage() {
             window.location.href = 'informazioni.html';
         }
+
         function openProfilePage() {
             window.location.href = 'profilo.html';
         }
@@ -24,6 +25,10 @@
             } else {
                 addDiv.style.display = 'none';
             }
+        }
+
+        function goToViewPage() {
+            window.location.href = "visualizza.html";
         }
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -47,9 +52,9 @@
         <div class="name" contenteditable="true"></div>
         <p style="color: rgb(255, 153, 0); padding-bottom:0; margin-left: 2rem; margin-bottom:0rem; font-weight:bold;">General information</p>
         <div class="information" contenteditable="true"></div>
-        <p style="color: rgb(255, 153, 0); padding-bottom:0; margin-left: 2rem; margin-bottom:1rem; font-weight:bold;">serial number</p>
+        <p style="color: rgb(255, 153, 0); padding-bottom:0; margin-left: 2rem; margin-bottom:1rem; font-weight:bold;">Serial number</p>
         <div class="name" contenteditable="true"></div>
-        <button class="addButton" id="addButton">add</button>
+        <button class="addButton" id="addButton">Add</button>
     </div>
     <h1 class="titolo"><b>WELCOME</b></h1>
     <img class="img" src="immagini/incognito3.png" alt="Immagine del logo">
@@ -57,14 +62,14 @@
     <button class="profilo" id="profileButton">View Profile</button>
     
     <h2 class="sottotitolo" style="border-color: #FFE8D2;">Your user friendly panel</h2>
-    <h3 style="border-color: #FFE8D2; margin-left: 3.5vw; color: rgb(32, 32, 32); margin-bottom: 1px;">Your devices</h2>
+    <h3 style="border-color: #FFE8D2; margin-left: 3.5vw; color: rgb(32, 32, 32); margin-bottom: 1px;">Your devices</h3>
     <br>
     <div class="container1">
         <div class="info" id="infoDiv">
-            <h4 class="textInfo">Pannello 1</h6>
-			<p style="text-align:left; margin-left:1rem"> Nome: pannello</p>
-			<button class="visualizza"> visualizza</button>
-			<p style="text-align:left; margin-left:1rem";> Informazioni: prova pannello standard</p>
+            <h4 class="textInfo">Pannello 1</h4>
+            <p style="text-align:left; margin-left:1rem">Nome: pannello</p>
+            <button class="visualizza" onclick="goToViewPage()"><b>Visualizza</b></button>
+            <p style="text-align:left; margin-left:1rem;">Informazioni: prova pannello standard</p>
         </div>
         <div class="aggiungi" onclick="toggleAddDiv()">
             <div class="piu1"></div>
