@@ -1,5 +1,5 @@
 body {
-    background: white;
+    background: #FFE8D2;
     text-align: center;
 }
 
@@ -25,12 +25,12 @@ body {
     line-height: 21px;
 }
 
-.image {
+.img {
     border: 2px solid black;
     border-radius: 5%;
     width: 40rem;
     height: 25rem;
-    background-color: white;
+    background-color: none;
     margin-top: 5rem;
 }
 
@@ -42,7 +42,6 @@ body {
     text-align: center;
 }
 
-
 .container {
     display: flex;
     text-align: center;
@@ -52,4 +51,23 @@ body {
     height: 1000px;
     background-color: #FFE8D2;
     margin: 0 3rem;
+}
+
+.volt {
+    text-align: left;
+    margin-left: 23rem;
+    margin-top: 2rem;
+}
+
+hr {
+    margin-top: 1px;
+    width: 15rem;
+    color: black;
+    height: 3px;
+    background-color: #000;
+    border: none;
+}
+
+h2 {
+    margin-bottom: 1px;
 }
