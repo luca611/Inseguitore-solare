@@ -6,8 +6,6 @@
     <link rel="stylesheet" type="text/css" href="style2.css"> <!-- collegamento css -->
 </head>
 <body>
-    <button class="button-open" onclick="document.getElementById('loginForm').style.display='block'">Login</button>
-    <button class="button-sign-in" onclick="document.getElementById('signInForm').style.display='block'">Register</button>
 
     <img class="img" src="immagini/logo.webp" alt="Immagine del logo">
 
@@ -16,9 +14,14 @@
         <hr>
     </div>
     <p class="slogan">Make it renewable</p>
-    <p style="text-align:center; margin-top:20rem;">or</p>
-    
-    <!-- LOGIN -->
+
+    <div class="button-container">
+        <button class="login-button" onclick="openForm('loginForm')">Login</button>
+        <span class="or-text">or</span>
+        <button class="register-button" onclick="openForm('signInForm')">Register</button>
+    </div>
+	
+	<!-- LOGIN -->
     <div class="form-popup" id="loginForm">
         <form action="home2.html" class="form-container">
             <h1 style="color: orange; margin-bottom: 1px;">SUNFLOWER</h1>
@@ -31,7 +34,7 @@
             <label for="psw"><b style="color: orange">Password</b></label>
             <input type="password" placeholder="Inserisci la password" name="psw" required style="border: 1px solid orange">
             <button type="submit" class="btn">Login</button>
-            <p style="text-align:center">or</p>
+            <p style="margin-left:11.5rem;">or</p>
             <button type="button" class="btn cancel" onclick="switchToRegister()">Register</button>
         </form>
     </div>
@@ -51,12 +54,18 @@
             <label for="psw"><b style="color: orange">Password</b></label>
             <input type="password" placeholder="Inserisci la password" name="psw" required style="border: 1px solid orange">
             <button type="submit" class="btn">Register</button>
-            <p style="text-align:center">or</p>
+            <p style="margin-left:11.5rem;">or</p>
             <button type="button" class="btn cancel" onclick="switchToLogin()">Login</button>
         </form>
     </div>
 
     <script>
+        function openForm(formId) {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('signInForm').style.display = 'none';
+            document.getElementById(formId).style.display = 'block';
+        }
+
         function switchToRegister() {
             document.getElementById('loginForm').style.display = 'none';
             document.getElementById('signInForm').style.display = 'block';
@@ -67,5 +76,6 @@
             document.getElementById('loginForm').style.display = 'block';
         }
     </script>
+
 </body>
 </html>

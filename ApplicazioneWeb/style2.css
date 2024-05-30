@@ -2,56 +2,10 @@
     font-family: fontFigma;
     src: url(fonts/IBMPlexMono-Bold.ttf);
 }
+
 body {
     background: white;
     font-family: "fontFigma";
-}
-
-
-.button-open {
-    background-color: #ffa500;
-    color: black;
-	border-radius: 0.5rem;
-    border: 2px solid black;
-
-    padding: 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    opacity: 0.8;
-    position: fixed;
-    width: 15rem;
-    transition: 0.4s ease;
-    bottom:18%;
-    left: 40%;
-	font-weight:bold;
-    
-}
-
-.button-sign-in{
-	background-color:rgb(255, 255, 255) ;
-    color: black;
-    padding: 0px 20px;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    opacity: 0.8;
-    position: fixed;
-    width: 280px;
-    transition: 0.4s ease;
-    bottom: 10%;
-    left: 40%;
-	text-decoration: none;
-	border-radius: 0.5rem;
-}
-
-.button-open:hover {
-    opacity: 1;
-    background-color:#ffa500;
-    text-shadow: 0px 0px 0px #f1f1f1 ;	
-}
-
-.button-sign-in:hover {
-	font-weight: bold;
 }
 
 .form-popup {
@@ -61,11 +15,11 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color:white;
+    background-color: white;
     padding: 10px;
-	height:700px;
+    height: 700px;
     max-width: 400px;
-	max-height: 700px;
+    max-height: 700px;
 }
 
 .form-container input[type=text], .form-container input[type=password] {
@@ -81,22 +35,25 @@ body {
     background-color: #ddd;
     outline: none;
 }
+
 .form-container .btn {
-	margin-top:20px;
-    background: orange ;
+    margin-top: 20px;
+    background: orange;
     color: black;
-	font-weight:bold;
+    font-weight: bold;
     padding: 16px 20px;
     border-radius: 0.5rem; 
     cursor: pointer;
-    width: 100%;
+    width: 90%;
     margin-bottom: 10px;
     opacity: 0.8;
+	margin-left:1rem;
 }
 
 .form-container .btn:hover {
     opacity: 1;
 }
+
 .cancel {
     background-color: red;
 }
@@ -115,22 +72,19 @@ body {
     font-style: normal;
 }
 
-
-.img{
+.img {
     width: 300px; 
     height: auto; 
-	margin-left:39%;
-	margin-top: 5%;
+    margin-left: 39%;
+    margin-top: 5%;
 }
 
-
-
-.text-logo{
-	font-weight: bold;
-	text-align:center;
-	font-size:2rem;
+.text-logo {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
     margin-bottom: 0; 
-	color: orange;
+    color: orange;
 }
 
 .rigaHome hr {
@@ -138,47 +92,86 @@ body {
     height: 4px;
     margin: 0 auto; 
     border-color: orange; 
-	background:orange;
+    background: orange;
 }
 
 .rigaLogin hr {
     width: 70%;
     height: 4px;
     margin: 0 auto; 
-    border-color: orange;	
-	background:orange;
-	margin-bottom:1px;
+    border-color: orange;    
+    background: orange;
+    margin-bottom: 1px;
 }
 
-
-.h2Login{
-	font-size:2rem;
-	text-align:center;
-	color:orange;
-
+.h2Login {
+    font-size: 2rem;
+    text-align: center;
+    color: orange;
 }
 
-
-button.btn.cancel{	
-	margin-top:0px;
-	background: none;
-	border: none;
+button.btn.cancel {    
+    margin-top: 0px;
+    background: none;
+    border: none;
 }
 
-.button.btn.cancel :hover{	
-	margin-top:0px;
-	background: none;
-	border: none;
-	font-weight:bold;
-	font-size:4rem;
+.button.btn.cancel:hover {    
+    margin-top: 0px;
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 4rem;
 }
 
-.slogan{
-	color: orange;
-	margin-top:6px;
-	text-align:center;
-	font-style:italic;
-	font-size:1.5rem;
-
+.slogan {
+    color: orange;
+    margin-top: 6px;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.5rem;
 }
 
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-button {
+    padding: 10px 20px;
+	width:12rem;
+	height:4rem;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+	background-color:orange;
+	border:2px solid black;
+	border-radius:8px;
+	opacity: 0.8;
+}
+.register-button:hover {
+    opacity: 1;
+}
+
+.login-button{
+	width:12rem;
+	height:4rem;
+	background-color:orange;
+	border:none;
+	padding: 10px 20px;
+    margin-top: 6rem;
+    font-size: 16px;
+    cursor: pointer;
+	border:2px solid black;
+	border-radius:8px;
+	opacity: 0.8;
+}
+.login-button:hover {
+    opacity: 1;
+}
+.or-text {
+    font-size: 16px;
+    margin: 10px;
+}
