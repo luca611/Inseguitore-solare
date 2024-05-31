@@ -55,6 +55,7 @@ void loop() {
   int dest = cercaLuce();
   posiziona(dest);
   inclina();
+  Serial.println(String(analogRead(PIN_FOTO)*5/1023.0));
   delay(10000);
 }
 
