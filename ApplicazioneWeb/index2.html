@@ -7,21 +7,23 @@
 </head>
 <body>
 
-    <img class="img" src="immagini/logo.webp" alt="Immagine del logo">
+    <div class="initial-container">
+        <img class="img" src="immagini/logo.webp" alt="Immagine del logo">
 
-    <p class="text-logo">SUNFLOWER</p>
-    <div class="rigaHome">
-        <hr>
-    </div>
-    <p class="slogan">Make it renewable</p>
+        <p class="text-logo">SUNFLOWER</p>
+        <div class="rigaHome">
+            <hr>
+        </div>
+        <p class="slogan">Make it renewable</p>
 
-    <div class="button-container">
-        <button class="login-button" onclick="openForm('loginForm')">Login</button>
-        <span class="or-text">or</span>
-        <button class="register-button" onclick="openForm('signInForm')">Register</button>
+        <div class="button-container">
+            <button class="login-button" onclick="openForm('loginForm')">Login</button>
+            <span class="or-text">or</span>
+            <button class="register-button" onclick="openForm('signInForm')">Register</button>
+        </div>
     </div>
-	
-	<!-- LOGIN -->
+    
+    <!-- LOGIN -->
     <div class="form-popup" id="loginForm">
         <form action="home2.html" class="form-container">
             <h1 style="color: orange; margin-bottom: 1px;">SUNFLOWER</h1>
@@ -34,7 +36,7 @@
             <label for="psw"><b style="color: orange">Password</b></label>
             <input type="password" placeholder="Inserisci la password" name="psw" required style="border: 1px solid orange">
             <button type="submit" class="btn">Login</button>
-            <p style="margin-left:11.5rem;">or</p>
+            <p style="text-align:center;">or</p>
             <button type="button" class="btn cancel" onclick="switchToRegister()">Register</button>
         </form>
     </div>
@@ -54,28 +56,49 @@
             <label for="psw"><b style="color: orange">Password</b></label>
             <input type="password" placeholder="Inserisci la password" name="psw" required style="border: 1px solid orange">
             <button type="submit" class="btn">Register</button>
-            <p style="margin-left:11.5rem;">or</p>
+            <p style="text-align:center;">or</p>
             <button type="button" class="btn cancel" onclick="switchToLogin()">Login</button>
         </form>
     </div>
 
     <script>
-        function openForm(formId) {
-            document.getElementById('loginForm').style.display = 'none';
-            document.getElementById('signInForm').style.display = 'none';
-            document.getElementById(formId).style.display = 'block';
-        }
+    
+    <!--apertura login/register-->
+    function openForm(formId) {
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('signInForm').style.display = 'none';
+        document.getElementById(formId).style.display = 'block';
+        document.querySelector('.initial-container').style.display = 'none';
+    }
 
-        function switchToRegister() {
-            document.getElementById('loginForm').style.display = 'none';
-            document.getElementById('signInForm').style.display = 'block';
-        }
+    <!--cambia a registrer-->
+    function switchToRegister() {
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('signInForm').style.display = 'block';
+        document.querySelector('.initial-container').style.display = 'none';
+    }
 
-        function switchToLogin() {
-            document.getElementById('signInForm').style.display = 'none';
-            document.getElementById('loginForm').style.display = 'block';
+    <!--cambia a login-->
+    function switchToLogin() {
+        document.getElementById('signInForm').style.display = 'none';
+        document.getElementById('loginForm').style.display = 'block';
+        document.querySelector('.initial-container').style.display = 'none';
+    }
+
+    <!--mostra immagine-->
+    function closeForms() {
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('signInForm').style.display = 'none';
+        document.querySelector('.initial-container').style.display = 'block';
+    }
+    
+    <!--nascondi immagine-->
+    window.addEventListener('click', function(event) {
+        if (!event.target.closest('.form-popup') && !event.target.closest('.button-container')) {
+            closeForms();
         }
-    </script>
+    });
+</script>
 
 </body>
 </html>
