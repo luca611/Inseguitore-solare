@@ -63,7 +63,7 @@
 
     <script>
     
-    <!--apertura login/register-->
+    //apertura login/register
     function openForm(formId) {
         document.getElementById('loginForm').style.display = 'none';
         document.getElementById('signInForm').style.display = 'none';
@@ -71,28 +71,28 @@
         document.querySelector('.initial-container').style.display = 'none';
     }
 
-    <!--cambia a registrer-->
+    //cambia a registrer
     function switchToRegister() {
         document.getElementById('loginForm').style.display = 'none';
         document.getElementById('signInForm').style.display = 'block';
         document.querySelector('.initial-container').style.display = 'none';
     }
 
-    <!--cambia a login-->
+    //cambia a login
     function switchToLogin() {
         document.getElementById('signInForm').style.display = 'none';
         document.getElementById('loginForm').style.display = 'block';
         document.querySelector('.initial-container').style.display = 'none';
     }
 
-    <!--mostra immagine-->
+    //mostra immagine
     function closeForms() {
         document.getElementById('loginForm').style.display = 'none';
         document.getElementById('signInForm').style.display = 'none';
         document.querySelector('.initial-container').style.display = 'block';
     }
     
-    <!--nascondi immagine-->
+    //nascondi immagine
     window.addEventListener('click', function(event) {
         if (!event.target.closest('.form-popup') && !event.target.closest('.button-container')) {
             closeForms();
