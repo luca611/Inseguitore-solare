@@ -2,6 +2,8 @@ import serial
 from flask import Flask, render_template
 from flask_socketio import SocketIO, emit
 
+last="calc"
+
 app = Flask(__name__)
 socketio = SocketIO(app)
 arduino=serial.Serial('/dev/ttyACM0',9600,timeout=0)
@@ -17,12 +19,12 @@ def serve_homepage():
 @app.route('/jcp')
 def jcp():
     if(arduino.in_waiting>0):
-        ret=arduino.readline()
+        ret = arduino.readline()
+        last=ret.decode()
         print(ret.decode())
         return render_template('index.html', result=ret.decode())
     else:
-        return render_template('index.html',reselt="calc")
-
+        return render_template('index.html', result=last)
 
 def send_string_to_html(result_text):
     socketio.emit('update_string', {'data': result_text})
