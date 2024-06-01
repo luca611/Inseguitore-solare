@@ -2,7 +2,7 @@ import serial
 from flask import Flask, render_template
 from flask_socketio import SocketIO, emit
 
-last="calc"
+last="0"
 
 app = Flask(__name__)
 socketio = SocketIO(app)

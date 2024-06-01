@@ -2,17 +2,20 @@
 <html lang="html">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome</title>
+    <title>Benvenuto</title>
     <link rel="stylesheet" type="text/css" href="home2.css">
     <script>
+        // Funzione per aprire la pagina delle informazioni
         function openInfoPage() {
             window.location.href = 'informazioni.html';
         }
 
+        // Funzione per aprire la pagina del profilo
         function openProfilePage() {
             window.location.href = 'profilo.html';
         }
-		
+        
+        // Funzione per mostrare/nascondere il div di aggiunta
         function toggleAddDiv() {
             var addDiv = document.getElementById('addDiv');
             var oscuramento = document.getElementById('scuro');
@@ -27,10 +30,12 @@
             }
         }
 
+        // Funzione per andare alla pagina di visualizzazione
         function goToViewPage() {
             window.location.href = "visualizza.html";
         }
 
+        // Aggiunge gli event listener quando il DOM è pronto
         document.addEventListener('DOMContentLoaded', () => {
             var addButton = document.getElementById('addButton');
             addButton.addEventListener('click', () => {
@@ -48,21 +53,21 @@
 <body>
     <div class="hidden" id="scuro"></div>
     <div class="add" id="addDiv" style="display: none;">
-        <p style="color: rgb(255, 153, 0); padding-top: 0.5rem; padding-bottom:0.5rem; margin-left: 2rem; margin-bottom:0rem; font-weight:bold;">Name</p>
+        <p style="color: rgb(255, 153, 0); padding-top: 0.5rem; padding-bottom:0.5rem; margin-left: 2rem; margin-bottom:0rem; font-weight:bold;">Nome</p>
         <div class="name" contenteditable="true"></div>
-        <p style="color: rgb(255, 153, 0); padding-bottom:0; margin-left: 2rem; margin-bottom:0rem; font-weight:bold;">General information</p>
+        <p style="color: rgb(255, 153, 0); padding-bottom:0; margin-left: 2rem; margin-bottom:0rem; font-weight:bold;">Informazioni generali</p>
         <div class="information" contenteditable="true"></div>
-        <p style="color: rgb(255, 153, 0); padding-bottom:0; margin-left: 2rem; margin-bottom:1rem; font-weight:bold;">Serial number</p>
+        <p style="color: rgb(255, 153, 0); padding-bottom:0; margin-left: 2rem; margin-bottom:1rem; font-weight:bold;">Numero di serie</p>
         <div class="name" contenteditable="true"></div>
-        <button class="addButton" id="addButton">Add</button>
+        <button class="addButton" id="addButton">Aggiungi</button>
     </div>
-    <h1 class="titolo"><b>WELCOME</b></h1>
+    <h1 class="titolo"><b>BENVENUTO</b></h1>
     <img class="img" src="immagini/incognito3.png" alt="Immagine del logo">
     <div class="img-container"></div>
-    <button class="profilo" id="profileButton">View Profile</button>
+    <button class="profilo" id="profileButton">Visualizza Profilo</button>
     
-    <h2 class="sottotitolo" style="border-color: #FFE8D2;">Your user friendly panel</h2>
-    <h3 style="border-color: #FFE8D2; margin-left: 3.5vw; color: rgb(32, 32, 32); margin-bottom: 1px;">Your devices</h3>
+    <h2 class="sottotitolo" style="border-color: #FFE8D2;">Il tuo pannello user friendly</h2>
+    <h3 style="border-color: #FFE8D2; margin-left: 3.5vw; color: rgb(32, 32, 32); margin-bottom: 1px;">I tuoi dispositivi</h3>
     <br>
     <div class="container1">
         <div class="info" id="infoDiv">

@@ -128,12 +128,6 @@ void ruota(int passi){
   }
 }
 
-/*
-void scrivi(){
-
-}
-*/
-
 void inclina(){
   inclinatore.write(calcolaAngolazione());
 }
